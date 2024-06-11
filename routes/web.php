@@ -15,6 +15,8 @@ Route::get('/dashboard/list', function () {
     return view('pages/toDoList');
 })->name('liste');
 
+Route::get('/dashboard/list', [\App\Http\Controllers\TodosController::class, 'liste'])->name('list');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
