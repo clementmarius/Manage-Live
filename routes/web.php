@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use APP\Http\Controllers\TodosController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -16,6 +17,8 @@ Route::get('/dashboard/list', function () {
 })->name('liste');
 
 Route::get('/dashboard/list', [\App\Http\Controllers\TodosController::class, 'liste'])->name('list');
+
+Route::post('/action/add', [TodosController::class, "saveTodo"]);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
