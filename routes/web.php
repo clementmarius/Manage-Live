@@ -7,6 +7,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/dashboard/date', function () {
+    return view('pages/dateAndTime');
+})->name('date');
+
+Route::get('/dashboard/list', function () {
+    return view('pages/toDoList');
+})->name('liste');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
