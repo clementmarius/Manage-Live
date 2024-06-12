@@ -33,7 +33,7 @@
         crossorigin="anonymous"
     ></script>
 </head>
-<body>
+<body class="d-flex justify-content-center align-items-center">
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="#">Ma Todo List</a>
 </nav>
