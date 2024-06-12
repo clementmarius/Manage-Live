@@ -1,6 +1,6 @@
 @extends("template") @section("title", "Ma Todo List") @section("content")
     <div class="container">
-        <div class="card d-flex justify-content-center align-content-center">
+        <div class="card">
             <div class="card-body">
                 <!-- Action -->
                 <form action="/action/add" method="post" class="add">
