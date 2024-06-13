@@ -21,6 +21,7 @@ Route::get('/dashboard/list', function () {
 Route::get('/dashboard/list', [ToDoListController::class, 'liste'])->name('list');
 Route::post('/dashboard/list', [ToDoListController::class, "saveTodo"]);
 Route::get('/dashboard/list{id}', [ToDoListController::class, 'markAsDone']);
+Route::get('/dashboard/list{id}', [ToDoListController::class, 'deleteTodo']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

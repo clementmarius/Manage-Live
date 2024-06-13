@@ -33,4 +33,13 @@ class ToDoListController extends Controller
         }
         return redirect("dashboard/list");
     }
+
+    public function deleteTodo($id){
+        $todo  = Todos::find($id);
+        if($todo){
+            $todo->delete();
+        }
+
+        return redirect("dashboard/list");
+    }
 }
