@@ -25,7 +25,7 @@
                 <ul class="list-group">
                     @forelse ($todos as $todo)
                         <li class="list-group-item">
-                            <span>{{ $todo->texte }}</span>
+                            <span>{{ $todo->text }}</span>
                             <!-- Action à ajouter pour Terminer et supprimer -->
                         </li>
                     @empty

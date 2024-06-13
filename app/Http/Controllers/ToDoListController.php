@@ -22,6 +22,6 @@ class ToDoListController extends Controller
             $todo->save();
         }
 
-        return redirect("pages/displayList");
+        return redirect("dashboard/list");
     }
 }

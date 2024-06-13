@@ -17,10 +17,8 @@ Route::get('/dashboard/list', function () {
     return view('pages/toDoList');
 })->name('liste');
 
-//Route::get('/dashboard/list', [TodosController::class, 'liste'])->name('list');
 
 Route::get('/dashboard/list', [ToDoListController::class, 'liste'])->name('list');
-//Route::post('/dashboard/list', [TodosController::class, "saveTodo"]);
 Route::post('/dashboard/list', [ToDoListController::class, "saveTodo"]);
 
 Route::get('/dashboard', function () {
