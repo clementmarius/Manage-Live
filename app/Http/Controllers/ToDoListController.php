@@ -5,12 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Todos;
 use Illuminate\Http\Request;
 
-
-class TodosController extends Controller
+class ToDoListController extends Controller
 {
-
-    protected string $namespace = 'App\Http\Controllers';
-
     public function liste()
     {
         return view("pages/toDoList",["todos"=>Todos::all()]);
@@ -21,11 +17,11 @@ class TodosController extends Controller
 
         if($texte){
             $todo = new Todos();
-            $todo->texte = $texte;
-            $todo->termine = 0;
+            $todo->text = $texte;
+            $todo->completed = 0;
             $todo->save();
         }
 
-        return redirect("pages/displayList");
+        return redirect("dashboard/list");
     }
 }

@@ -3,7 +3,8 @@
         <div class="card d-flex justify-content-center align-content-center">
             <div class="card-body">
                 <!-- Action -->
-                <form action="/action/add" method="post" class="add">
+                <form action="/dashboard/list" method="post" class="add">
+                    @csrf
                     <div class="input-group">
           <span class="input-group-addon" id="basic-addon1"
           ><span class="oi oi-pencil"></span
@@ -24,7 +25,7 @@
                 <ul class="list-group">
                     @forelse ($todos as $todo)
                         <li class="list-group-item">
-                            <span>{{ $todo->texte }}</span>
+                            <span>{{ $todo->text }}</span>
                             <!-- Action à ajouter pour Terminer et supprimer -->
                         </li>
                     @empty

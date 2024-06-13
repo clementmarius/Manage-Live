@@ -1,8 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ToDoListController;
 use Illuminate\Support\Facades\Route;
-use APP\Http\Controllers\TodosController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -16,9 +17,9 @@ Route::get('/dashboard/list', function () {
     return view('pages/toDoList');
 })->name('liste');
 
-Route::get('/dashboard/list', [\App\Http\Controllers\TodosController::class, 'liste'])->name('list');
 
-Route::post('/action/add', [TodosController::class, "saveTodo"]);
+Route::get('/dashboard/list', [ToDoListController::class, 'liste'])->name('list');
+Route::post('/dashboard/list', [ToDoListController::class, "saveTodo"]);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
