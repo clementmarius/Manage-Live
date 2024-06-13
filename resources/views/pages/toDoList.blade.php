@@ -3,7 +3,7 @@
         <div class="card d-flex justify-content-center align-content-center">
             <div class="card-body">
                 <!-- Action -->
-                <form action="/action/add" method="post" class="add">
+                <form action="/dashboard/list" method="post" class="add">
                     @csrf
                     <div class="input-group">
           <span class="input-group-addon" id="basic-addon1"
