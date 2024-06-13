@@ -18,15 +18,22 @@
                             aria-label="My new idea"
                             aria-describedby="basic-addon1"
                         />
+                        <button type="button" class="btn btn-primary">Completed</button>
+
                     </div>
                 </form>
 
                 <!-- Liste -->
                 <ul class="list-group">
                     @forelse ($todos as $todo)
-                        <li class="list-group-item">
+                        <li class="list-group-item d-flex justify-content-between">
                             <span>{{ $todo->text }}</span>
                             <!-- Action à ajouter pour Terminer et supprimer -->
+                            <div class="">
+                                <button type="button" class="btn btn-success">Completed</button>
+                                <button type="button" class="btn btn-danger">Delete</button>
+                            </div>
+
                         </li>
                     @empty
                         <li class="list-group-item text-center">C'est vide !</li>
