@@ -24,4 +24,13 @@ class ToDoListController extends Controller
 
         return redirect("dashboard/list");
     }
+
+    public function markAsDone($id){
+        $todo  = Todos::find($id);
+        if($todo){
+            $todo->completed = 1;
+            $todo->save();
+        }
+        return redirect("dashboard/list");
+    }
 }
